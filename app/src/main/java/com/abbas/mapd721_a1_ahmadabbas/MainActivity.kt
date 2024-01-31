@@ -2,6 +2,7 @@ package com.abbas.mapd721_a1_ahmadabbas
 
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
@@ -141,6 +142,8 @@ fun MainScreen(){
                             dataStore.saveUserData(UserData(username, email, -1))
                         }
                     }
+
+                    Toast.makeText(context, "Saved", Toast.LENGTH_SHORT).show()
                 }
             ) {
                 // Set the text of the button to "Save"
@@ -154,6 +157,10 @@ fun MainScreen(){
                     coroutineScope.launch {
                         dataStore.clearUserData()
                     }
+
+                    username = ""
+                    email = ""
+                    id = ""
                 }) {
                 // Set the text of the button to "Clear"
                 Text("Clear")
