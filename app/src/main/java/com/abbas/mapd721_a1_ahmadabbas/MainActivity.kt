@@ -36,7 +36,7 @@ import kotlinx.coroutines.launch
 
 
 // This is a class that extends ComponentActivity and sets the content view
-// This is a class that extends ComponentActivity and sets the content view
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
